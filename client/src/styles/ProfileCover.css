@@ -1,0 +1,275 @@
+.profile-cover-container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 35px auto;
+}
+
+/* ================= COVER ================= */
+
+.cover-container {
+  position: relative;
+  height: 300px;
+}
+
+.cover-image,
+.cover-placeholder {
+  width: 100%;
+  height: 300px;
+  border-radius: 22px;
+}
+
+.cover-image {
+  object-fit: cover;
+}
+
+.cover-placeholder {
+  background: #18181b;
+  border: 2px dashed #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 90px;
+}
+
+/* COVER BUTTON */
+
+.cover-menu-wrapper {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+}
+
+.cover-upload-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  z-index: 101;
+  font-size: 15px;
+}
+
+.cover-upload-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ================= DROPDOWN ================= */
+
+.image-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 180px;
+  background: #18181b;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 200;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background: #27272a;
+}
+
+.dropdown-item input {
+  display: none;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-info {
+  position: relative;
+  height: 170px;
+  margin-top: 0;
+  padding: 0 40px;
+  z-index: 5;
+}
+
+.profile-image-wrapper {
+  position: absolute;
+  top: -85px;
+  left: 40px;
+}
+
+.profile-image,
+.profile-placeholder {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 6px solid #0b0b0d;
+  background: #18181b;
+}
+
+.profile-image {
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 70px;
+}
+
+/* PROFILE CAMERA */
+
+.profile-menu-wrapper {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 100;
+}
+
+.profile-upload-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-upload-btn:hover {
+  background: #1d4ed8;
+}
+
+.profile-dropdown {
+  top: 50px;
+  right: 0;
+}
+
+/* ================= USER DETAILS ================= */
+
+.user-details {
+  position: absolute;
+  left: 40px;
+  top: 95px;
+}
+
+.user-name {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+.user-email {
+  color: #a1a1aa;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.user-username {
+  color: #9ca3af;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* ================= EDIT BUTTON ================= */
+
+.profile-action {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-profile-btn,
+.save-btn,
+.cancel-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.edit-profile-btn {
+  background: #2563eb;
+}
+
+.edit-profile-btn:hover {
+  background: #1d4ed8;
+}
+
+.save-btn {
+  background: #10b981;
+}
+
+.cancel-btn {
+  background: #dc2626;
+}
+
+/* ================= INPUT ================= */
+
+.edit-input {
+  width: 230px;
+  height: 38px;
+  background: #18181b;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+  padding: 0 12px;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+.edit-input:focus {
+  border-color: #2563eb;
+}
+
+
+@media (max-width: 768px) {
+  .profile-info {
+    padding: 0 20px;
+  }
+
+  .user-details {
+    left: 20px;
+  }
+
+  .profile-action {
+    right: 20px;
+  }
+
+  .cover-image,
+  .cover-placeholder {
+    height: 220px;
+  }
+
+  .profile-image,
+  .profile-placeholder {
+    width: 140px;
+    height: 140px;
+  }
+}

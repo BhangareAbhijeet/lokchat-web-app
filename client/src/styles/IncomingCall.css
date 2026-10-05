@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+.incomingPage {
+    position: fixed;
+
+    top: 0;
+    left: 72px;
+    right: 0;
+    bottom: 0;
+
+    width: auto;
+    height: 100%;
+
+    overflow: hidden;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.incomingOverlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .55);
+}
+
+.callerInfo {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+.callerProfile {
+    width: 150px;
+    height: 150px;
+    margin-top: -170px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 5px solid white;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .4);
+
+    animation: ring 2s infinite;
+}
+
+@keyframes ring {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.callerInfo h1 {
+    margin-top: 25px;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    color: #fff;
+}
+
+.callerNumber {
+    margin-top: 8px;
+
+    font-size: 20px;
+
+    color: #dddddd;
+}
+
+.callType {
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    color: white;
+}
+
+.videoText {
+    margin-top: 12px;
+
+    font-size: 18px;
+
+    color: #dddddd;
+}
+
+.bottomActions {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 45px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 80px;
+
+    z-index: 50;
+}
+
+.action {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: white;
+}
+
+.circle {
+
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 34px;
+
+    transition: .25s;
+}
+
+.circle:hover {
+
+    transform: scale(1.08);
+
+}
+
+.red {
+
+    background: #ff3b30;
+
+}
+
+.green {
+
+    background: #22c55e;
+
+}
+
+.blue {
+
+    background: #3478f6;
+
+}
+
+.action span {
+
+    margin-top: 12px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+}
+
+.avatarFallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+@media(max-width:900px) {
+
+    .callerProfile {
+
+        width: 140px;
+        height: 140px;
+
+    }
+
+    .callerInfo h1 {
+
+        font-size: 34px;
+
+    }
+
+    .callerNumber {
+
+        font-size: 17px;
+
+    }
+
+    .callType {
+
+        font-size: 20px;
+
+    }
+
+    .bottomActions {
+
+        gap: 45px;
+
+    }
+
+    .circle {
+
+        width: 70px;
+        height: 70px;
+
+        font-size: 30px;
+
+    }
+
+    .action span {
+
+        font-size: 16px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .callerProfile {
+
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .callerInfo h1 {
+
+        font-size: 28px;
+
+    }
+
+    .callerNumber {
+
+        font-size: 15px;
+
+    }
+
+    .callType {
+
+        font-size: 17px;
+
+    }
+
+    .videoText {
+
+        font-size: 15px;
+
+    }
+
+    .bottomActions {
+
+        gap: 28px;
+        bottom: 35px;
+
+    }
+
+    .circle {
+
+        width: 62px;
+        height: 62px;
+
+        font-size: 26px;
+
+    }
+
+    .action span {
+
+        font-size: 14px;
+
+    }
+
+}

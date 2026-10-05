@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+.videoPage {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.remoteVideo {
+    position: absolute;
+    inset: 0;
+}
+
+.remoteCamera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #111;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, .35),
+            rgba(0, 0, 0, .05),
+            rgba(0, 0, 0, .45));
+}
+
+.userDetails {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    z-index: 300;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.userDetails h2 {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.status {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.online {
+    color: #39ff72;
+}
+
+.offline {
+    color: #d9d9d9;
+}
+
+.selfCamera {
+    position: absolute;
+    right: 30px;
+    bottom: 130px;
+    cursor: pointer;
+    width: 300px;
+    height: 190px;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    background: #222;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .45);
+
+    z-index: 100;
+}
+
+.selfCamera video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cameraOff {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    z-index: 100;
+}
+
+/* ===========================
+     CONTROLS
+  =========================== */
+
+.controls {
+    position: absolute;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 22px;
+
+    padding: 18px 28px;
+
+    background: rgba(25, 25, 25, .85);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(20px);
+
+    z-index: 100;
+}
+
+.controls button {
+
+    width: 65px;
+    height: 65px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #505050;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.controls button:hover {
+
+    transform: scale(1.08);
+
+    background: #666;
+
+}
+
+.endCall {
+
+    background: #ff4747 !important;
+
+}
+
+.endCall:hover {
+
+    background: #ff2d2d !important;
+
+}
+
+.fullscreenBtn {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.25s;
+
+    z-index: 300;
+}
+
+.selfCamera:not(.fullscreenSelf):hover .fullscreenBtn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.smallRemote:hover .fullscreenBtn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Small self video वर mouse नेल्यावर icon दिसेल */
+.selfCamera:hover .fullscreenBtn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.smallRemote .fullscreenBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    z-index: 300;
+}
+
+.fullscreenBtn:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+/* ===========================
+     RESPONSIVE
+  =========================== */
+
+@media(max-width:900px) {
+
+    .selfCamera {
+        width: 220px;
+        height: 140px;
+    }
+
+    .profile {
+        width: 55px;
+        height: 55px;
+    }
+
+    .userDetails h2 {
+        font-size: 24px;
+    }
+
+    .status {
+        font-size: 15px;
+    }
+
+    .controls button {
+        width: 58px;
+        height: 58px;
+        font-size: 22px;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .userDetails {
+        left: 15px;
+        top: 15px;
+    }
+
+    .selfCamera {
+        width: 160px;
+        height: 100px;
+        right: 15px;
+    }
+
+    .controls {
+        width: 95%;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .controls button {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+    }
+
+    .smallRemote {
+        width: 160px;
+        height: 100px;
+
+        top: auto;
+        left: auto;
+        right: 15px;
+        bottom: 130px;
+    }
+
+}
+
+.fullscreenSelf {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    z-index: 50;
+}
+
+.smallRemote {
+    position: absolute;
+
+    top: auto;
+    left: auto;
+
+    right: 30px;
+    bottom: 130px;
+
+    width: 300px;
+    height: 190px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    z-index: 150;
+
+    background: #222;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.endBtn {
+    background: #ff4747 !important;
+
+}
+
+.smallRemote .remoteCamera {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.avatarFallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600; }

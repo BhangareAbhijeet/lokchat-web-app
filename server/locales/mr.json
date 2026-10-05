@@ -1,0 +1,16 @@
+{
+  "success": "यशस्वी",
+  "failed": "अयशस्वी",
+  "user_registered_successfully": "वापरकर्ता यशस्वीरित्या नोंदणीकृत झाला",
+  "login_successful": "लॉगिन यशस्वी",
+  "email_or_phone_in_use": "ईमेल किंवा फोन आधीच वापरात आहे",
+  "invalid_credentials": "अवैध प्रमाणपत्रे",
+  "already_logged_in": "वापरकर्ता आधीच दुसऱ्या डिव्हाइसवर लॉगिन आहे",
+  "server_error": "सर्व्हर त्रुटी",
+  "user_not_found": "वापरकर्ता आढळला नाही",
+  "logged_out_successfully": "यशस्वीपणे लॉगआउट केले",
+  "otp_sent_successfully": "OTP यशस्वीपणे पाठवला",
+  "invalid_or_expired_otp": "अवैध किंवा कालबाह्य OTP",
+  "otp_verified_successfully": "OTP यशस्वीपणे पडताळले गेले",
+  "password_reset_successfully": "पासवर्ड यशस्वीपणे रीसेट झाला"
+}

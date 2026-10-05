@@ -1,0 +1,340 @@
+:root {
+    --card-bg: #ffffff;
+    --text-color: #111111;
+    --sub-text: #666666;
+    --border-color: #e5e5e5;
+    --icon-bg: #f3f4f6;
+    --icon-color: #2563eb;
+    --arrow-color: #666;
+    --modal-bg: #ffffff;
+    --modal-text: #111;
+}
+
+
+/* Laptop Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --card-bg: #111111;
+        --text-color: #ffffff;
+        --sub-text: #9d9d9d;
+        --border-color: #262626;
+        --icon-bg: #3d3d3d;
+        --icon-color: #ffffff;
+        --arrow-color: #d7d7d7;
+        --modal-bg: #121212;
+        --modal-text: #ffffff;
+    }
+
+}
+
+    .profile-setting-container {
+        width: 92%;
+        max-width: 900px;
+        margin: 25px auto 60px;
+    }
+
+    /* =========================
+    CARD
+    ========================= */
+
+    .profile-setting-card {
+        background: #111111;
+        border: 1px solid #2a2a2a;
+        border-radius: 20px;
+        padding: 22px;
+        margin-bottom: 20px;
+
+        min-height: 280px;
+        /* decreased from 380px */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-setting-card h2 {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    /* =========================
+    ROW
+    ========================= */
+
+    .setting-row {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 14px 0;
+        border-bottom: 1px solid #262626;
+    }
+
+    .setting-row:last-child {
+        border-bottom: none;
+    }
+
+    /* =========================
+    LEFT SIDE
+    ========================= */
+
+    .setting-left {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    /* =========================
+    ICON BOX
+    ========================= */
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: #3d3d3d;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-box svg {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* =========================
+    TEXT
+    ========================= */
+
+    .setting-left h4 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .setting-left p {
+        font-size: 15px;
+        color: #9d9d9d;
+        margin-top: 4px;
+    }
+
+    /* =========================
+    RIGHT ARROW
+    ========================= */
+
+    .arrow {
+        color: #d7d7d7;
+        font-size: 24px;
+    }
+    /* Toggle */
+    /* Toggle */
+
+    .toggle {
+        position: relative;
+        width: 52px;
+        height: 28px;
+    }
+
+    .toggle input {
+        display: none;
+    }
+
+    .slider {
+        position: absolute;
+        inset: 0;
+        background: #000;
+        /* OFF = Black */
+        border: 1px solid white;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .slider::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 3px;
+        top: 3px;
+        background: #fff;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    /* ON = Grey */
+
+    .toggle input:checked+.slider {
+        background: #8b8b8b;
+    }
+
+    .toggle input:checked+.slider::before {
+        transform: translateX(24px);
+    }
+
+    /* =========================
+    LOGOUT
+    ========================= */
+
+    .logout-row {
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .logout-row:hover {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .logout-row .icon-box {
+        background: #3f3f3f;
+    }
+
+    .logout-row h4 {
+        color: white;
+    }
+
+    /* Logout Modal */
+
+    .logout-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .logout-modal {
+        width: 420px;
+        background: #121212;
+        border-radius: 28px;
+        padding: 35px;
+        color: white;
+        animation: popup .25s ease;
+    }
+
+    @keyframes popup {
+        from {
+            transform: scale(.9);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .logout-modal h2 {
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 18px;
+    }
+
+    .logout-modal p {
+        color: #c5c5c5;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+
+    .logout-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+
+    .cancel-btn {
+        background: transparent;
+        border: none;
+        color: #8d8d8d;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .confirm-btn {
+        background: #ff2d2d;
+        border: none;
+        color: white;
+        padding: 14px 40px;
+        border-radius: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .confirm-btn:hover {
+        background: #e11d1d;
+    }
+
+    /* =========================
+    MOBILE
+    ========================= */
+
+    @media (max-width:768px) {
+
+        .profile-setting-container {
+            width: 95%;
+            margin: 20px auto 40px;
+        }
+
+        .profile-setting-card {
+            padding: 20px;
+            border-radius: 18px;
+            min-height: auto;
+        }
+
+        .profile-setting-card h2 {
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .setting-row {
+            padding: 18px 0;
+        }
+
+        .setting-left {
+            gap: 14px;
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+        }
+
+        .icon-box svg {
+            font-size: 20px;
+        }
+
+        .setting-left h4 {
+            font-size: 18px;
+        }
+
+        .setting-left p {
+            font-size: 14px;
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        .toggle {
+            width: 50px;
+            height: 28px;
+        }
+
+        .slider::before {
+            width: 22px;
+            height: 22px;
+        }
+
+        .toggle input:checked+.slider::before {
+            transform: translateX(22px);
+        }
+    }

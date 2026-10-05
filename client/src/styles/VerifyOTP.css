@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+/* ================= THEME ================= */
+
+:root {
+    --bg-gradient: linear-gradient(180deg, #f8c79b 0%, #f7d8d8 55%, #ead7f8 100%);
+
+    --card-bg: rgba(255, 255, 255, .35);
+    --card-border: rgba(255, 255, 255, .55);
+    --card-shadow: rgba(0, 0, 0, .08);
+
+    --title: #111;
+    --text: #333;
+    --email: #1565d8;
+
+    --otp-bg: #fff;
+    --otp-border: #d9d9d9;
+    --otp-focus: #999;
+
+    --button: #1565d8;
+    --button-hover: #0f57c7;
+
+    --timer: #6d6d6d;
+    --link: #1565d8;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+
+        --bg-gradient: linear-gradient(180deg, #11141d, #181b25, #23263a);
+
+        --card-bg: rgba(20, 22, 30, .75);
+        --card-border: rgba(255, 255, 255, .08);
+        --card-shadow: rgba(0, 0, 0, .4);
+
+        --title: #fff;
+        --text: #cfcfcf;
+        --email: #5da2ff;
+
+        --otp-bg: #0f141d;
+        --otp-border: #5b5b5b;
+        --otp-focus: #2d6cff;
+
+        --button: #2d6cff;
+        --button-hover: #1b53e8;
+
+        --timer: #9f9f9f;
+        --link: #5da2ff;
+    }
+}
+
+/* ================= PAGE ================= */
+
+.otp-page {
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--bg-gradient);
+    padding: 20px;
+}
+
+/* ================= CARD ================= */
+
+.otp-card {
+
+    width: 100%;
+    max-width: 530px;
+
+    padding: 50px 40px;
+
+    border-radius: 35px;
+
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid var(--card-border);
+
+    box-shadow: 0 20px 45px var(--card-shadow);
+
+    text-align: center;
+}
+
+.otp-card h1 {
+
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--title);
+
+    margin-bottom: 18px;
+}
+
+.otp-text {
+
+    font-size: 22px;
+    color: var(--text);
+    line-height: 1.45;
+
+}
+
+.otp-email {
+
+    margin-top: 8px;
+    color: var(--email);
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+/* ================= OTP ================= */
+
+.otp-inputs {
+
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    margin: 30px 0;
+
+}
+
+.otp-inputs input {
+
+    width: 68px;
+    height: 72px;
+
+    border-radius: 12px;
+
+    border: 2px solid var(--otp-border);
+
+    background: var(--otp-bg);
+
+    color: var(--title);
+
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 600;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+.otp-inputs input:focus {
+
+    border-color: var(--otp-focus);
+
+}
+
+/* ================= BUTTON ================= */
+
+.verify-btn {
+
+    width: 100%;
+    height: 65px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: var(--button);
+
+    color: #fff;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.verify-btn:hover {
+
+    background: var(--button-hover);
+
+}
+
+/* ================= TEXT ================= */
+
+.resend-text {
+
+    margin-top: 20px;
+
+    color: var(--timer);
+
+    font-size: 18px;
+
+}
+
+.back-login {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: var(--link);
+
+    font-size: 20px;
+
+    text-decoration: none;
+}
+
+.back-login:hover {
+
+    text-decoration: underline;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+    .otp-card {
+
+        padding: 45px 25px;
+
+    }
+
+    .otp-card h1 {
+
+        font-size: 42px;
+
+    }
+
+    .otp-text {
+
+        font-size: 18px;
+
+    }
+
+    .otp-email {
+
+        font-size: 17px;
+
+    }
+
+    .otp-inputs {
+
+        gap: 8px;
+
+    }
+
+    .otp-inputs input {
+
+        width: 46px;
+        height: 58px;
+
+        font-size: 24px;
+
+    }
+
+    .verify-btn {
+
+        height: 55px;
+        font-size: 19px;
+
+    }
+
+}
+
+.resend-text {
+    margin-top: 28px;
+    color: var(--timer);
+    font-size: 18px;
+}
+
+.resend-link {
+    color: var(--link);
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.resend-link:hover {
+    text-decoration: underline;
+}
+
+.otp-success-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otp-success-content {
+    width: min(100%, 480px);
+    padding: 42px 32px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 28px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    animation: fadeInUp 0.45s ease;
+}
+
+.success-badge {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1e9d5c, #28c76f);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(40, 199, 111, 0.35);
+}
+
+.otp-success-content h2 {
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--title);
+}
+
+.otp-success-content p {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.5;
+}
+
+.redirect-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.redirect-loader span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--button);
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.redirect-loader span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.redirect-loader span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        opacity: 0.35;
+        transform: scale(0.8);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .otp-success-content {
+        padding: 32px 20px;
+    }
+
+    .success-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+}

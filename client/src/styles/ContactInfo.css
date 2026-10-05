@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.contactPage {
+    min-height: 100vh;
+    background: #000;
+    padding: 18px;
+}
+
+/* ================= HEADER ================= */
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.iconBtn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.iconBtn:hover {
+    background: #202020;
+}
+
+.menuContainer {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 240px;
+    background: #1b1b1b;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2b2b2b;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+    z-index: 100;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 18px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.menuItem:hover {
+    background: #2a2a2a;
+}
+
+
+/* Added */
+.dangerMenu {
+    color: #ef4444;
+}
+
+.dangerMenu:hover {
+    background: #2a2a2a;
+}
+
+
+/* ================= PROFILE ================= */
+
+.profileSection {
+    text-align: center;
+}
+
+.profileImage {
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid #8b8b8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    overflow: hidden;
+}
+
+.profileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileImage span {
+    font-size: 70px;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.profileSection h2 {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.profileSection p {
+    color: #999;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+
+/* ================= ACTIONS ================= */
+
+.actions {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.actionCard {
+    background: #202020;
+    border-radius: 14px;
+    padding: 22px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.actionCard:hover {
+    background: #2b2b2b;
+}
+
+.actionCard svg {
+    color: white;
+}
+
+.actionCard span {
+    display: block;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+
+/* ================= TABS ================= */
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    border-bottom: 1px solid #242424;
+}
+
+
+.tabs button {
+
+    flex: 1;
+    background: none;
+    border: none;
+    color: #9d9d9d;
+    padding: 15px 0;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+
+}
+
+
+
+.tabs button.active {
+
+    color: #2563eb;
+
+}
+
+
+
+.tabs button.active::after {
+
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 35%;
+    width: 30%;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 5px;
+
+}
+
+
+
+/* ================= EMPTY ================= */
+
+.mediaSection {
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyMedia {
+    text-align: center;
+}
+
+.emptyMedia svg {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.emptyMedia h3 {
+    margin-bottom: 10px;
+}
+
+.emptyMedia p {
+    color: #8b8b8b;
+}
+
+
+/* ================= INFO ================= */
+
+.infoCard {
+    margin-top: 25px;
+    border-bottom: 1px solid #202020;
+    padding-bottom: 20px;
+}
+
+.infoCard h4 {
+    color: #888;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.infoCard p {
+    font-size: 21px;
+}
+
+
+/* ================= OPTIONS ================= */
+
+.options {
+    margin-top: 25px;
+}
+
+
+/* Updated */
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid #202020;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+/* Added */
+.optionLeft {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.option:hover {
+    color: #2563eb;
+}
+
+.option span {
+    font-size: 18px;
+}
+
+.option svg:last-child {
+    color: #777;
+}
+
+
+.danger:hover {
+    color: #ef4444;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+    .profileImage {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profileSection h2 {
+        font-size: 28px;
+    }
+
+    .actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tabs button {
+        font-size: 16px;
+    }
+
+    .infoCard p {
+        font-size: 18px;
+    }
+
+    .menu {
+        width: 220px;
+    }
+
+}

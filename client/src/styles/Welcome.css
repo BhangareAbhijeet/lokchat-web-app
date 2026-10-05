@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Theme ---------- */
+
+:root {
+    --bg-color: #ffffff;
+    --title-color: #111827;
+    --desc-color: #000000;
+    --pattern: url("../assets/bg-design-light.png");
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #000000;
+        --title-color: #ffffff;
+        --desc-color: #9ca3af;
+        --pattern: url("../assets/bg-design-dark.png");
+    }
+}
+
+/* ---------- Body ---------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------- Main Container ---------- */
+
+.welcome-container {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--bg-color);
+    background-image: var(--pattern);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: top left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* ---------- Back Button ---------- */
+
+.back-button {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    background: transparent;
+    border: none;
+    color: var(--title-color);
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* ---------- Animated Content ---------- */
+
+.welcome-content {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* ---------- Image ---------- */
+
+
+.welcome-image img {
+    width: 340px;
+    height: 300px;
+    margin-top: 40px;
+}
+
+/* ---------- Title ---------- */
+
+.welcome-title {
+    color: var(--title-color);
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+/* ---------- Description ---------- */
+
+.welcome-description {
+    color: var(--desc-color);
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 120px;
+    width: 80%;
+
+}
+
+/* Page 1 */
+.desc1 {
+    margin-bottom: 120px;
+
+}
+
+/* Page 2 */
+.desc2 {
+    margin-bottom: 100px;
+}
+
+/* Page 3 */
+.desc3 {
+    margin-bottom: 140px;
+}
+
+/* ---------- Button ---------- */
+
+.next-button {
+    width: 250px;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2a3bfb;
+    color: white;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    margin-top: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+.btn1 {
+    margin-top: 70px;
+
+}
+
+
+.btn2 {
+    margin-top: 90px;
+
+}
+
+
+.btn3 {
+    margin-top: 50px;
+
+}
+
+/* ---------- Dots ---------- */
+
+.welcome-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 55px;
+    margin-top: -10px
+}
+
+.dot {
+    width: 10px;
+    height: 8px;
+    background: #d3d1d1;
+    border-radius: 40%;
+    transition: 0.3s;
+}
+
+.dot.active {
+    width: 20px;
+    background: #2563eb;
+    border-radius: 4px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+    .welcome-image img {
+        width: 190px;
+    }
+
+    .welcome-title {
+        font-size: 34px;
+    }
+
+    .welcome-description {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .next-button {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .back-button {
+        left: 20px;
+        top: 20px;
+    } }
